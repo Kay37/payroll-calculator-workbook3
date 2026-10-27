@@ -2,32 +2,32 @@ package com.pluralsight;
 
 public class Employee {
 
-    private String employeeID;
-    private String fullName;
+    private String employeeId;
+    private String name;
     private double hoursWorked;
-    private double payRate;
+    private double PayRate;
 
-    public Employee(String employeeID, String fullName, double hoursWorked, double payRate) {
-        this.employeeID = employeeID;
-        this.fullName = fullName;
+    public Employee(String employeeId, String name, double hoursWorked, double PayRate) {
+        this.employeeId = employeeId;
+        this.name = name;
         this.hoursWorked = hoursWorked;
-        this.payRate = payRate;
+        this.PayRate = PayRate;
     }
 
-    public String getEmployeeID() {
-        return employeeID;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public void setEmployeeID(String employeeID) {
-        this.employeeID = employeeID;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getName() {
+        return name;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getHoursWorked() {
@@ -39,11 +39,16 @@ public class Employee {
     }
 
     public double getPayRate() {
-        return payRate;
+        return PayRate;
     }
 
-    public void setPayRate(double payRate) {
-        this.payRate = payRate;
+
+    public void setPayRate(double PayRate) {
+        this.PayRate = PayRate;
+    }
+
+    public double getGrossPay() {
+        return hoursWorked * PayRate;
     }
 
 }
